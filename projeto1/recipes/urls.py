@@ -1,10 +1,12 @@
 from django.urls import path
 
-from recipes.views import home
+
+from . import views #o ponto suvstitui o nome da pasta atual
 
 
 
 urlpatterns = [
-    path('', home), #/home raiz
+    path('', views.home, name="recipes-home"), #/home raiz
+    path('recipes/<int:id>/', views.recipe, name="recipes-recipe"),
 
 ]

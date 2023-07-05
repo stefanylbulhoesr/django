@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    {% include 'recipes/partials/head.html' %} <!--Para executar um comando django no html-->
+<title>{% block title %}{% endblock title %}Recipes</title>
+</head>
+<body>
+    {% include 'recipes/partials/header.html' %}
+    {% include 'recipes/partials/search.html' %}
+
+    <main class="main-content-container">
+        {% block content %}{% endblock content %}
+    </main>
+    {% include 'recipes/partials/footer.html' %}
+</body>
+</html>
