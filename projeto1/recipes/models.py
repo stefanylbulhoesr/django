@@ -24,7 +24,7 @@ class Recipe(models.Model):
     updated_at = models.DateTimeField(auto_now=True) #o auto_now atualiza o campo
     is_published = models.BooleanField(default=False)
     cover = models.ImageField(upload_to='recipes/covers/%Y/%m/%d/')
-    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True) #precisa do paremetro para onde vai (category) e o on delete define o que vai acontecer caso a categoria seja deletada, nesse caso, será nula e, para isso, precisamos do null=True
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True, default=None) #precisa do paremetro para onde vai (category) e o on delete define o que vai acontecer caso a categoria seja deletada, nesse caso, será nula e, para isso, precisamos do null=True
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True) #aqui está usando o import de User para adicionar os usuários ao banco 
 
 

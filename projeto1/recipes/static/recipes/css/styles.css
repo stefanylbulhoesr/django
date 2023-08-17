@@ -264,4 +264,9 @@
     .preparation-steps {
         padding: var(--spacing-gutter-medium);
         text-align: justify;
+        
+    }
+
+    .preparation-steps > p {
+        margin: 2rem 0;
     }
